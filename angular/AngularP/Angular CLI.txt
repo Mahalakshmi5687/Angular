@@ -1,0 +1,107 @@
+Angular CLI:
+Part 1 - what is Angular CLI
+  *What is Angular CLI
+  *Why should we use Angular CLI and the
+    benefits it provide          
+Manually setting up an Angular application from scratch
+Create application folder and add the configuration files
+Install the packages
+Create root application component - app.component.ts(Every angular application should have one component which is the root component and this one component bootstraps the anguar application)
+Create root application module - app.module.ts
+Create main.ts file - which is main entry point of our application
+Create index.html
+
+Manually setting up is time consuming and leborious
+
+What is Angular CLI
+Angular CLI is command line tool that help us to
+Create Angular applications faster and with great consistency
+Create the boiler plate code for angular features like components, directives, pipes, services etc
+Create boiler plate code for TypeScript feature like classes, interfaces, enums etc
+It follows angular best practices and convenctions out of the box
+Run Unit and End-to-End(e2e) tests
+Create optimized builds for deployment to production
+
+
+Installing Angular CLI:
+Part 2 - How to Install Angular CLI
+Prerequisites: Node 6.9.0 or higher & NPM 3 or higher
+
+To Check the versions use-
+node -v
+npm -v
+
+To get the latest version of Node and NPM
+https://nodejs.org/en/download/
+
+To install Angular CLI
+npm install -g @angular/cli
+OR
+npm i -g @angular/cli(Flag -g installs Angular CLI globally)
+
+To verify the version of Angular CLI installed
+ng version
+
+If you run into problems installing Angular CLI
+Delete "npm" folder from C:\Users\Your_UserName\AppData\Roaming
+Note: Make sure "Show hidden files, folders, and drivers" option is turned on
+Uninstall and reinstall node.js (go to control panel -> features -> uninstall node.js)
+Install Angular CLI again
+
+
+Part 3- Angular CLI Create New Project
+How to create a new angular project from scratch using Angular CLI
+Run the app
+Run unit and end-to-end test
+
+To create a new application project
+ng new MyFirstApp
+To run application
+ng serve --open(runs the project in your default browser)
+To run all Unit test 
+ng test
+To run all e2e test
+ng e2e
+
+
+Part 4- Customize Command Prompt
+How to customize command prompt window
+if do ng --help
+all cmds which are there in angular cli should show but due to screen size of cmd prmt it will not show all.
+To increase the screen buffer size, increase the height property value under Screen Buffer Size section on the Layout tab in the Properties window
+   To redirect the output of a command to windows clipboard 
+     ng --help | clip
+   To redirect the output of a command to a text document
+     ng --help > Help.txt
+     ng --help > Help.doc
+   From the properties window of the command prompt we can also change the cursor size, font           size, font colour and background colour.
+
+
+Part 5- Angular CLI ng new options
+Options that we can use with ng new command
+ng new App1 - will creates new project with name App1
+ng new --help - help to list all the options that we can use with ng new command 
+	*ng new --dry-run(ng new -d) - this command will lists out all the files it will create instead it will not actually create any files or folders.
+	*ng new App1 --skip-install(ng new App1 -si) - creates all required files and folders but skips nodemodules which takes more time. to install nodemodules we use npm install.
+	*ng new App3 -si --skip-tests(ng new App3 -si -st) - skips generating unit test cases file(spect file) and nodemodules.
+	*ng new App4 -si -st -inline-template(ng new App4 -si -st -it) - creates all required files and folders but skips nodemodules and spect files(test cases file) and html file instead of creating html file it makes it as inline template.
+	*ng new App5 -si -st -it --inline-style(ng new App4 -si -st -it -is) - creates all required files and folders but skips nodemodules and spect files(test cases file) and html file instead of creating html file it makes it as inline template and skips external css files instead it makes inline style.
+
+
+Part 6- Angular CLI Configuration File
+Significance of the Angular CLI configuration file(.angular-cli.json)
+
+-ng new App5 --style scss - it creates the project with scss style file.
+
+	-ng generate component abc(ng g c abc) - it creates a component with name abc.
+	due we created App5 project with scss the component also creates with scss file only.	
+	-ng g c xyz --style css - it creates a component with name xyz with css style file.
+	-we can change the prefix of project using prefix and ng new command(ng new App6 --prefix maha)
+	we can also override the prefix by prefix cmd (ng g c xyz --prefix tech) this will override maha with tech.
+
+The settings from the Angular CLI configuration file are used when we :
+*Generate angular features likes components, pipes, services etc.
+*Run unit and end-to-end tests.
+*Build the application etc.
+
+Please note: The values in the Angular CLI configuration file depends on the options that you have used with the "ng new" command when generating a new angular project
