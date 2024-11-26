@@ -104,4 +104,4 @@ The settings from the Angular CLI configuration file are used when we :
 *Run unit and end-to-end tests.
 *Build the application etc.
 
-Please note: The values in the Angular CLI configuration file depends on the options that you have used with the "ng new" command when generating a new angular project
+note: The values in the Angular CLI configuration file depends on the options that you have used with the "ng new" command when generating a new angular project
